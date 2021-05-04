@@ -5,7 +5,20 @@ import reactor.core.publisher.Mono;
 import java.time.Duration;
 
 public class OperatorTest {
-
+    /**
+     * operator-->
+     * map
+     * flatmap---->async operation
+     * flatMapMany---> mono method to convert flux
+     *
+     * concat
+     * merge
+     * both combine multiple flux plublisher---> cooncat sequencially---> first flux1...then flux2
+     * while merge combine them without wsequence randomly
+     *
+     *
+     * zip--->combine item 1 with item2 simulatenously----> [Flux1_item1,Flux2_item1],[Flux1_item2,Flux2_item2]
+     */
     @Test
     public void map() {
         Flux.range(1, 5)
